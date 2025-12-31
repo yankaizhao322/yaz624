@@ -88,15 +88,37 @@ where conditions like 'DIAB1%' or conditions like '% DIAB1%'
 ```
 --- 找到状况里 DIAB1 ...或者 ... DIAB1...的情况
 
-###
+### 196. 删重复邮箱
+
+```mysql
 delete p1 
 from person p1
 join person p2
 on p1.email = p2.email
 and p1.id > p2.id
+```
 
+### 176. second highest salary
+```mysql
+select max(salary)  SecondHighestSalary from Employee
 
+where salary < (
+    select
+        max(salary)
+        from Employee
+)
+```
+*找到最大的salary， 这个salary小于实际上最大的salary*
 
+### 1484. 同一天卖出的产品名
+```mysql
+select sell_date, count(distinct product) as num_sold, GROUP_CONCAT(DISTINCT product ORDER BY product) as products
+from Activities
+group by sell_date
+order by sell_date
+```
+
+*output: Basketball,Headphone,T-shirt*
 
 
 
