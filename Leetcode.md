@@ -89,6 +89,11 @@ where conditions like 'DIAB1%' or conditions like '% DIAB1%'
 --- 找到状况里 DIAB1 ...或者 ... DIAB1...的情况
 
 ###
+delete p1 
+from person p1
+join person p2
+on p1.email = p2.email
+and p1.id > p2.id
 
 
 
