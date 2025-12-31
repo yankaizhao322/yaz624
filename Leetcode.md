@@ -44,7 +44,7 @@ class Solution:
                 (900,  "CM"), # 元组：900 → "CM"
             ]
 
-# Reverse Words 列表
+## Reverse Words 列表
     print(my_string[::-1])  # 输出: olleh (字符串反转)
     class Solution:
     def reverseWords(self, s: str) -> str:
@@ -59,7 +59,7 @@ class Solution:
             output.append(w[i])
         return " ".join(output)
 
-# 209 Minimum Size Subarray Sum:
+## 209 Minimum Size Subarray Sum:
 
 "Minimum Size Subarray Sum" 题目中的数组 nums 不保证是排序的，而且它要求的是连续子数组，这通常需要使用**滑动窗口（Sliding Window）**算法，而不是从两端向中间靠拢的双指针。
 并非所有滑动窗口问题都需要将结果变量初始化为 float('inf')。这取决于你要找的是什么：
@@ -67,6 +67,41 @@ class Solution:
 寻找“最大”值：如果你要寻找最大长度、最大和、最大数量等，那么你应该将存储最大值的变量初始化为 0 或 float('-inf')（负无穷大），以确保任何正向结果都能被记录下来。
 
 
-# Foundation         
+## Foundation         
 1. 可以用逗号分隔：print("Output:", i) 2.或者用 f-string:print(f"Output: {i}")
    append()是Python中列表（list）的一个方法，用于在列表末尾添加新的元素。
+
+# SQL
+
+## Substring:
+### 1167. (find the name, then using Abcd format)
+```mysql
+# using concat to joint
+select user_id, concat(upper(left(name, 1)),lower(substring(name, 2))) as name
+from users
+order by user_id
+```
+### 1527. (' %like ')
+```mysql
+select patient_id, patient_name, conditions from Patients
+where conditions like 'DIAB1%' or conditions like '% DIAB1%'
+```
+--- 找到状况里 DIAB1 ...或者 ... DIAB1...的情况
+
+###
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
