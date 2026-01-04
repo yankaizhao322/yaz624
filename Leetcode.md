@@ -1,5 +1,14 @@
 # <font color="red"> 5.26 </font>
 
+
+# Functions 
+```mysql
+1. PERCENTILE_CONT(0.5)  # median
+2. TYPEOF('')
+3. datediff(a, b)
+4. 
+```
+
 ##  274: H_index
 Input: citations = [3,0,6,1,5]
 Output: 3
