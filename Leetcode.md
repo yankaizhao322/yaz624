@@ -16,6 +16,29 @@ Output: 3
 range(start, stop, step)
 ```
 # <font color="red"> 5.27 </font>
+## Reverse ListNodes:
+遍历（traverse）关注的是「把所有元素都访问一遍」
+迭代（iterate）关注的是「一步一步推进状态的过程」
+
+**1-2-3-4**
+Initially: The prev is null. curr = 1, temp = curr.next = 2
+1st iteration: prev = 1, curr = 2, temp = 2.next = 3
+2st iteration: prev = 
+3rd iteration:
+4rd iteration:
+```python
+class Solution:
+    def ReverseList(self , head: ListNode) -> ListNode:
+        if head is null:
+            return 0
+        prev = None
+        curr = head
+        while curr:
+            temp = curr.next
+            curr.next, prev = prev, curr
+            curr = temp
+        return prev
+```
 ## 135: candy (greedy 左右双遍历)
 有几个n孩子站成一排。每个孩子都被分配了一个整数数组中的评分值ratings。您将根据以下要求向这些孩子分发糖果：
 1. 每个孩子必须至少有一颗糖果。
